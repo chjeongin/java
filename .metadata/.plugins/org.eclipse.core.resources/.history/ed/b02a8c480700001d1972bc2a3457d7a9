@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Maint {
+	public static void main(String[] args) {
+		System.out.println("== 프로그램 시작 ==");
+		Scanner sc = new Scanner(System.in); //ctrl+shift + o, System.in ==> 키보드를 입력하는 것. close() 작업이 필요!!+
+		//String command = sc.nextLine();
+		//command = sc.nextLine();
+		while(true) {
+			System.out.printf("명령어를 입력하세요 >> ");
+			String command = sc.next(); //nextLine() --> ("단어 단어") 가능, next()-->("단어") 가능
+			if(command.equals("exit")) {
+				break;
+			}
+			
+		}
+//		int num = sc.nextInt();
+//		System.out.println("입력된 명령어 : "+num);
+		
+		sc.close();
+		System.out.println("== 프로그램 끝 ==");
+	}
+}

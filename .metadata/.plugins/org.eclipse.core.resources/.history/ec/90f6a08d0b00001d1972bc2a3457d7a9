@@ -22,7 +22,6 @@ public class Maint {
 				System.out.println("게시글이 없습니다.");
 			}else if(command.equals("article write")) {
 				int id = lastNum +1;
-				lastNum = id;
 				System.out.printf("제목 : ");
 				String title = sc.nextLine();
 				System.out.printf("내용 : ");
@@ -31,7 +30,7 @@ public class Maint {
 				System.out.println("내용 : "+body);
 				
 				
-				System.out.printf("%d번 게시글이 생성되었습니다.",lastNum);
+				System.out.printf("%d번 게시글이 생성되었습니다.",num);
 			}else {
 				System.out.printf("%s는 존재하지 않는 명령어입니다.\n", command);
 			}

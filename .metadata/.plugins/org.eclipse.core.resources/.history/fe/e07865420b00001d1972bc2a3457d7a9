@@ -6,12 +6,11 @@ public class Maint {
 		Scanner sc = new Scanner(System.in); //ctrl+shift + o, System.in ==> 키보드를 입력하는 것. close() 작업이 필요!!+
 		//String command = sc.nextLine();
 		//command = sc.nextLine();
-		int lastNum = 0;
 		while(true) {
 			System.out.printf("명령어를 입력하세요 >> ");
 			String command = sc.nextLine(); //nextLine() --> command.equals("단어 단어") 가능, next()-->("단어") 가능
 			command = command.trim();
-			
+			int num = 0;
 			if(command.length()==0) {
 				continue;
 				
@@ -21,8 +20,6 @@ public class Maint {
 			}else if(command.equals("article list")) {
 				System.out.println("게시글이 없습니다.");
 			}else if(command.equals("article write")) {
-				int id = lastNum +1;
-				lastNum = id;
 				System.out.printf("제목 : ");
 				String title = sc.nextLine();
 				System.out.printf("내용 : ");
@@ -30,8 +27,8 @@ public class Maint {
 				System.out.println("제목 : "+title);
 				System.out.println("내용 : "+body);
 				
-				
-				System.out.printf("%d번 게시글이 생성되었습니다.",lastNum);
+				num ++;
+				System.out.printf("%d번 게시글이 생성되었습니다.",num);
 			}else {
 				System.out.printf("%s는 존재하지 않는 명령어입니다.\n", command);
 			}
